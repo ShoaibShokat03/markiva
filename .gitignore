@@ -1,0 +1,20 @@
+# Build outputs
+/build/
+/dist/
+/tmp/
+/installer/dist/
+/ignore.exe
+/Ignore.exe
+/website
+
+# Frontend dependencies and caches
+/ui/node_modules/
+/ui/dist/
+
+# Wails generated development files
+/ui/wailsjs/
+
+# Logs and local config
+*.log
+*.tmp
+*.cache
