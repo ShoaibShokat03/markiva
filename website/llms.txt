@@ -1,0 +1,54 @@
+# Markdown Docs
+
+Markdown Docs is an installable Windows Markdown editor and previewer.
+
+## Important URLs
+
+- Home: https://markdowndocs.online/
+- Features: https://markdowndocs.online/features/
+- Online editor: https://markdowndocs.online/editor/
+- Download: https://markdowndocs.online/download/
+- Blog: https://markdowndocs.online/blog/
+- FAQ: https://markdowndocs.online/faq/
+- About: https://markdowndocs.online/about/
+- Contact: https://markdowndocs.online/contact/
+- Privacy: https://markdowndocs.online/privacy/
+- Terms: https://markdowndocs.online/terms/
+
+## Product Summary
+
+Markdown Docs opens, edits, previews, and autosaves Markdown files. It supports split editor/preview, full preview mode, toolbar insertion for headings, formatting, lists, tables, images, links, video directives, undo/redo, draft restore, title rename, and Windows open-with file workflow. The website also includes an online Markdown editor at /editor/.
+
+## Blog / Insights
+
+- Markdown Cheat Sheet (syntax quick reference): https://markdowndocs.online/blog/markdown-cheat-sheet/
+- What Is llms.txt?: https://markdowndocs.online/blog/what-is-llms-txt/
+- AI Agent Instruction Files Explained (pillar guide): https://markdowndocs.online/blog/ai-agent-instruction-files-explained/
+- What Is GEMINI.md? (Google Gemini CLI): https://markdowndocs.online/blog/what-is-gemini-md/
+- What Is copilot-instructions.md? (GitHub Copilot): https://markdowndocs.online/blog/what-is-copilot-instructions-md/
+- What Are Cursor Rules? (.cursor/rules .mdc): https://markdowndocs.online/blog/what-are-cursor-rules/
+- What Are Windsurf Rules? (Cascade): https://markdowndocs.online/blog/what-are-windsurf-rules/
+- What Is CONVENTIONS.md? (Aider): https://markdowndocs.online/blog/what-is-conventions-md/
+- What Is SKILL.md? (Claude Agent Skills): https://markdowndocs.online/blog/what-is-skill-md/
+- How to Create a SKILL.md File (step by step): https://markdowndocs.online/blog/how-to-create-a-skill-md-file/
+- What Is CHANGELOG.md?: https://markdowndocs.online/blog/what-is-changelog-md/
+- What Is CONTRIBUTING.md?: https://markdowndocs.online/blog/what-is-contributing-md/
+- What Is TODO.md?: https://markdowndocs.online/blog/what-is-todo-md/
+- What Is PROMPTS.md?: https://markdowndocs.online/blog/what-is-prompts-md/
+- What Is API.md?: https://markdowndocs.online/blog/what-is-api-md/
+- What Is SECURITY.md?: https://markdowndocs.online/blog/what-is-security-md/
+- Why Markdown Files Matter in the AI Age: https://markdowndocs.online/blog/why-markdown-files-matter-in-the-ai-age/
+- Best Markdown Editor for Windows with Live Preview: https://markdowndocs.online/blog/best-markdown-editor-for-windows-live-preview/
+- How to Open, Preview, and Edit .md Files on Windows: https://markdowndocs.online/blog/how-to-open-preview-edit-md-files-windows/
+- Markdown vs Word for AI Documentation: https://markdowndocs.online/blog/markdown-vs-word-for-ai-documentation/
+- Online Markdown Editor with Live Preview: https://markdowndocs.online/blog/online-markdown-editor-live-preview/
+- How to Use Markdown Files with AI Tools: https://markdowndocs.online/blog/how-to-use-markdown-files-with-ai/
+- What Is README.md?: https://markdowndocs.online/blog/what-is-readme-md/
+- What Is AGENTS.md?: https://markdowndocs.online/blog/what-is-agents-md/
+- What Is CLAUDE.md?: https://markdowndocs.online/blog/what-is-claude-md/
+- What Is DESIGN.md?: https://markdowndocs.online/blog/what-is-design-md/
+- Common .md Files for AI and Software Projects: https://markdowndocs.online/blog/common-md-files-for-ai-projects/
+
+## Download
+
+The Windows installer is available at https://markdowndocs.online/download-file/.

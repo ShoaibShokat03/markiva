@@ -1,0 +1,20 @@
+keyword,intent,est_volume,kd,allintitle,winnability,score,cluster,page_type,decision
+"Markdown Docs",navigational,low,low,estimated low,"brand SERP not owned; competitors appear",10,"brand authority",home/blog,reinforce exact brand internally
+"markdowndocs",navigational,low,low,estimated low,"domain exact match can win with indexation",10,"brand authority",home,reinforce domain and schema
+"best markdown editor for Windows",commercial,high,medium,competitive,"SERP includes tools, listicles, Reddit, stores",9,"Windows Markdown editor",blog,published guide
+"markdown editor for Windows with live preview",commercial,medium,low-medium,moderate,"more specific than head term",10,"Windows Markdown editor",blog,published guide
+"open .md files Windows",informational,medium,low,moderate,"SERP includes tutorials and viewers",10,".md file workflow",blog,published guide
+"how to preview Markdown on Windows",informational,medium,low,moderate,"clear tutorial intent",9,".md file workflow",blog,published guide
+"online markdown editor preview",commercial,high,medium,competitive,"Dillinger, StackEdit, Markdown Live Preview dominate",8,"online editor",existing page,link from blog and improve later
+"markdown files AI documentation",informational,medium,low-medium,moderate,"timely SERP with GitBook, llms.txt, Fern, Medium",10,"AI documentation",blog,published guide
+"markdown files in AI age",informational,low,low,low,"long-tail emerging topic",9,"AI documentation",blog,published guide
+"Markdown vs Word for AI documentation",informational,low-medium,low,low,"comparison query with strong topical fit",9,"AI documentation",blog,published comparison
+"llms.txt markdown documentation",informational,medium,medium,moderate,"authority sites present but topic aligns with llms.txt",8,"AI documentation",future post,plan follow-up
+"md file viewer Windows",commercial,medium,low-medium,moderate,"product intent; Microsoft Store and viewers rank",9,".md file workflow",future page,add landing section later
+"online markdown editor live preview",commercial,high,medium,competitive,"Dillinger, StackEdit, and Markdown Live Preview dominate; still important for product fit",9,"online editor",blog,published guide
+"how to use Markdown files with AI",informational,medium,low-medium,moderate,"AI tools increasingly use Markdown context and docs",10,"AI Markdown workflow",blog,published guide
+"what is README.md",informational,high,medium,competitive,"GitHub dominates but long-tail AI context angle is useful",8,"Markdown file explainers",blog,published guide
+"what is AGENTS.md",informational,medium,low-medium,moderate,"emerging agent-instructions keyword with official OpenAI source",10,"Markdown file explainers",blog,published guide
+"what is CLAUDE.md",informational,medium,low-medium,moderate,"emerging Claude Code memory keyword with official Anthropic source",10,"Markdown file explainers",blog,published guide
+"what is DESIGN.md",informational,low,low,low,"low competition convention query, supports AI docs cluster",8,"Markdown file explainers",blog,published guide
+"common .md files for AI projects",informational,low-medium,low,low,"cluster page links multiple file explainers",9,"Markdown file explainers",blog,published guide

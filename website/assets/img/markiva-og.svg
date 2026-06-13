@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f5f6f8"/>
+  <rect x="70" y="70" width="1060" height="490" rx="28" fill="#ffffff" stroke="#d8dde5"/>
+  <rect x="110" y="120" width="110" height="110" rx="24" fill="#20252b"/>
+  <path d="M140 134h36l22 22v58a6 6 0 0 1-6 6h-52a6 6 0 0 1-6-6v-74a6 6 0 0 1 6-6Z" fill="#fff8ee"/>
+  <path d="M148 193v-36h11l12 18 12-18h11v36h-11v-19l-10 15h-4l-10-15v19h-11Z" fill="#20252b"/>
+  <path d="M148 202h44v7h-44z" fill="#f27a4b"/>
+  <text x="250" y="170" font-family="Segoe UI, Arial" font-size="64" font-weight="700" fill="#171a1f">Markdown Docs</text>
+  <text x="252" y="225" font-family="Segoe UI, Arial" font-size="28" fill="#646d78">Fast Markdown editor and previewer for Windows</text>
+  <rect x="110" y="300" width="420" height="170" rx="12" fill="#20252b"/>
+  <text x="138" y="350" font-family="Consolas, monospace" font-size="24" fill="#fff8ee"># Project notes</text>
+  <text x="138" y="394" font-family="Consolas, monospace" font-size="20" fill="#fff8ee">- Live preview</text>
+  <text x="138" y="428" font-family="Consolas, monospace" font-size="20" fill="#fff8ee">- Autosave</text>
+  <rect x="565" y="300" width="455" height="170" rx="12" fill="#fff1eb" stroke="#f27a4b"/>
+  <text x="595" y="352" font-family="Segoe UI, Arial" font-size="30" font-weight="700" fill="#171a1f">Project notes</text>
+  <text x="595" y="402" font-family="Segoe UI, Arial" font-size="22" fill="#646d78">Live preview. Autosave. Full toolbar.</text>
+</svg>

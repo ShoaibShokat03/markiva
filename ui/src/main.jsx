@@ -39,7 +39,12 @@ import {
 } from 'lucide-react';
 import './styles.css';
 
-const starter = '# Welcome to Markiva\n\nOpen a Markdown file, or start writing here.\n\n- Fast editor\n- Live preview\n- Side-by-side and full preview modes\n';
+const starter = '# Welcome to Markdown Docs\n\nOpen a Markdown file, or start writing here.\n\n- Fast editor\n- Live preview\n- Side-by-side and full preview modes\n';
+const storageKeys = {
+  theme: 'markdown-docs-theme',
+  recent: 'markdown-docs-recent',
+  draft: 'markdown-docs-draft'
+};
 
 const fallback = {
   NewDocument: async () => ({ name: 'Untitled.md', path: '', content: starter }),
@@ -52,6 +57,14 @@ const fallback = {
 
 function api() {
   return window.go?.app?.App ?? fallback;
+}
+
+function getStoredValue(key) {
+  return localStorage.getItem(storageKeys[key]);
+}
+
+function removeStoredValue(key) {
+  localStorage.removeItem(storageKeys[key]);
 }
 
 const md = new MarkdownIt({
@@ -72,7 +85,7 @@ function escapeAttr(value) {
 function renderMarkdown(source) {
   const videos = [];
   const prepared = String(source || '').replace(/^::video\[(.*?)\]\((.*?)\)\s*$/gm, (_match, title, url) => {
-    const id = `@@MARKIVA_VIDEO_${videos.length}@@`;
+    const id = `@@MARKDOWN_DOCS_VIDEO_${videos.length}@@`;
     videos.push({
       id,
       html: `<figure class="videoEmbed"><video controls preload="metadata" src="${escapeAttr(url)}"></video><figcaption>${escapeAttr(title || 'Video')}</figcaption></figure>`
@@ -101,8 +114,8 @@ function App() {
   const [doc, setDoc] = useState({ name: 'Untitled.md', path: '', content: starter });
   const [savedContent, setSavedContent] = useState(starter);
   const [mode, setMode] = useState('split');
-  const [theme, setTheme] = useState(() => localStorage.getItem('markiva-theme') || 'light');
-  const [recent, setRecent] = useState(() => JSON.parse(localStorage.getItem('markiva-recent') || '[]'));
+  const [theme, setTheme] = useState(() => getStoredValue('theme') || 'light');
+  const [recent, setRecent] = useState(() => JSON.parse(getStoredValue('recent') || '[]'));
   const [notice, setNotice] = useState('');
   const [query, setQuery] = useState('');
   const [undoStack, setUndoStack] = useState([]);
@@ -117,7 +130,7 @@ function App() {
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
-    localStorage.setItem('markiva-theme', theme);
+    localStorage.setItem(storageKeys.theme, theme);
   }, [theme]);
 
   useEffect(() => {
@@ -127,7 +140,7 @@ function App() {
           loadDoc(incoming);
           return;
         }
-        const draft = localStorage.getItem('markiva-draft');
+        const draft = getStoredValue('draft');
         if (draft) {
           try {
             const parsed = JSON.parse(draft);
@@ -198,7 +211,7 @@ function App() {
         return;
       }
 
-      localStorage.setItem('markiva-draft', JSON.stringify({
+      localStorage.setItem(storageKeys.draft, JSON.stringify({
         name: doc.name || 'Untitled.md',
         content: doc.content,
         savedAt: new Date().toISOString()
@@ -230,14 +243,14 @@ function App() {
     if (!path) return;
     setRecent((items) => {
       const next = [path, ...items.filter((item) => item !== path)].slice(0, 8);
-      localStorage.setItem('markiva-recent', JSON.stringify(next));
+      localStorage.setItem(storageKeys.recent, JSON.stringify(next));
       return next;
     });
   };
 
   const newDocument = async () => {
     const incoming = await api().NewDocument();
-    localStorage.removeItem('markiva-draft');
+    removeStoredValue('draft');
     loadDoc(incoming);
     setSavedContent(incoming.content || '');
     setNotice('New document');
@@ -267,7 +280,7 @@ function App() {
         : await api().SaveMarkdownAs(doc.path || doc.name, doc.content);
       if (incoming) {
         loadDoc(incoming);
-        localStorage.removeItem('markiva-draft');
+        removeStoredValue('draft');
         setNotice(`Saved ${incoming.name}`);
       }
     } catch (err) {
@@ -280,7 +293,7 @@ function App() {
       const incoming = await api().SaveMarkdownAs(doc.path || doc.name, doc.content);
       if (incoming) {
         loadDoc(incoming);
-        localStorage.removeItem('markiva-draft');
+        removeStoredValue('draft');
         setNotice(`Saved ${incoming.name}`);
       }
     } catch (err) {
@@ -419,7 +432,7 @@ function App() {
         <div className="brand">
           <img src="/brand/markiva-logo.svg" alt="" />
           <div>
-            <h1>Markiva</h1>
+            <h1>Markdown Docs</h1>
             <span>Editor + preview</span>
           </div>
         </div>

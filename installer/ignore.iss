@@ -1,7 +1,7 @@
-#define MyAppName "Markiva"
+#define MyAppName "Markdown Docs"
 #define MyAppVersion "1.0.0"
 #define MyAppPublisher "Muhammad Shoaib"
-#define MyAppExeName "Markiva.exe"
+#define MyAppExeName "Markdown Docs.exe"
 
 [Setup]
 AppId={{2D9B9B2F-6A4D-4C44-B36B-1F7D10C91231}
@@ -12,7 +12,7 @@ DefaultDirName={autopf}\{#MyAppName}
 DefaultGroupName={#MyAppName}
 DisableProgramGroupPage=yes
 OutputDir=..\dist
-OutputBaseFilename=Markiva-Setup
+OutputBaseFilename=Markdown Docs-Setup
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern

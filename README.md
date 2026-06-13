@@ -1,6 +1,6 @@
-# Markiva
+# Markdown Docs
 
-Markiva is a fast Windows desktop Markdown editor and viewer built with Wails, Go, React, and Vite.
+Markdown Docs is a fast Windows desktop Markdown editor and viewer built with Wails, Go, React, and Vite.
 
 ## Features
 
@@ -24,5 +24,4 @@ Markiva is a fast Windows desktop Markdown editor and viewer built with Wails, G
 .\Build.bat
 ```
 
-The production executable is `build\bin\Markiva.exe`.
-"# markiva" 
+The production executable is `build\bin\Markdown Docs.exe`.

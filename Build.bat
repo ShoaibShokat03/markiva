@@ -20,7 +20,7 @@ if errorlevel 1 (
 set "PATH=%PATH%;C:\Program Files (x86)\NSIS;C:\Program Files\NSIS"
 where makensis >nul 2>nul
 if errorlevel 1 (
-  echo NSIS is required to build the Markiva installer.
+  echo NSIS is required to build the Markdown Docs installer.
   echo Install NSIS from https://nsis.sourceforge.io/Download or run:
   echo winget install -e --id NSIS.NSIS
   pause
@@ -67,10 +67,10 @@ if errorlevel 1 (
   exit /b 1
 )
 
-echo Preparing Markiva icons...
-powershell -NoProfile -ExecutionPolicy Bypass -File "scripts\generate-markiva-icons.ps1"
+echo Preparing Markdown Docs icons...
+powershell -NoProfile -ExecutionPolicy Bypass -File "scripts\generate-markdown-docs-icons.ps1"
 if errorlevel 1 (
-  echo Failed to prepare Markiva icons.
+  echo Failed to prepare Markdown Docs icons.
   pause
   exit /b 1
 )
@@ -81,10 +81,10 @@ if errorlevel 1 (
   exit /b 1
 )
 
-taskkill /F /IM "Markiva.exe" >nul 2>nul
+taskkill /F /IM "Markdown Docs.exe" >nul 2>nul
 if exist "build\bin" rmdir /s /q "build\bin"
 
-echo Building installable Markiva setup...
+echo Building installable Markdown Docs setup...
 wails build -nsis -trimpath -ldflags "-s -w" -webview2 download
 if errorlevel 1 (
   echo Installer build failed.
@@ -93,36 +93,36 @@ if errorlevel 1 (
 )
 
 echo Adding Markdown file associations to installer...
-powershell -NoProfile -ExecutionPolicy Bypass -File "scripts\patch-nsis-markiva.ps1"
+powershell -NoProfile -ExecutionPolicy Bypass -File "scripts\patch-nsis-markdown-docs.ps1"
 if errorlevel 1 (
   echo Failed to patch installer script.
   pause
   exit /b 1
 )
-makensis "-DARG_WAILS_AMD64_BINARY=..\..\bin\Markiva.exe" "build\windows\installer\project.nsi"
+makensis "-DARG_WAILS_AMD64_BINARY=..\..\bin\Markdown Docs.exe" "build\windows\installer\project.nsi"
 if errorlevel 1 (
   echo Failed to rebuild installer with Markdown associations.
   pause
   exit /b 1
 )
 
-if exist "build\bin\Markiva.exe" (
+if exist "build\bin\Markdown Docs.exe" (
   echo.
-  echo Markiva app built successfully:
-  echo build\bin\Markiva.exe
+  echo Markdown Docs app built successfully:
+  echo build\bin\Markdown Docs.exe
 )
 
-if exist "build\bin\Markiva-amd64-installer.exe" (
-  ren "build\bin\Markiva-amd64-installer.exe" "Markiva-Setup.exe" >nul 2>nul
+if exist "build\bin\Markdown Docs-amd64-installer.exe" (
+  ren "build\bin\Markdown Docs-amd64-installer.exe" "Markdown-Docs-Setup.exe" >nul 2>nul
 )
 
-if exist "build\bin\Markiva-Setup.exe" (
-  echo Markiva installer built successfully:
-  echo build\bin\Markiva-Setup.exe
+if exist "build\bin\Markdown-Docs-Setup.exe" (
+  echo Markdown Docs installer built successfully:
+  echo build\bin\Markdown-Docs-Setup.exe
   pause
   exit /b 0
 )
 
-echo Build finished, but build\bin\Markiva-Setup.exe was not found.
+echo Build finished, but build\bin\Markdown-Docs-Setup.exe was not found.
 pause
 exit /b 1

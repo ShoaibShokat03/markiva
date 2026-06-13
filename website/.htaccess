@@ -1,0 +1,35 @@
+Options -Indexes
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Canonical host: force HTTPS and non-www on the correct domain.
+  RewriteCond %{HTTPS} !=on [OR]
+  RewriteCond %{HTTP_HOST} ^www\.markdowndocs\.online$ [NC]
+  RewriteRule ^ https://markdowndocs.online%{REQUEST_URI} [R=301,L,NE]
+
+  # Permanent redirect from the old typo domain to the correct domain.
+  RewriteCond %{HTTP_HOST} ^(www\.)?makrdowndocs\.online$ [NC]
+  RewriteRule ^ https://markdowndocs.online%{REQUEST_URI} [R=301,L,NE]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml application/xml
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+</IfModule>
+
+AddType application/xml .xml
+AddType text/plain .txt .text

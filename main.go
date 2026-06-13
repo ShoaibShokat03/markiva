@@ -19,11 +19,11 @@ func main() {
 	if handled {
 		return
 	}
-	markiva, err := app.New(assets)
+	markdownDocs, err := app.New(assets)
 	if err != nil {
 		log.Fatal(err)
 	}
-	if err := ui.Run(markiva); err != nil {
+	if err := ui.Run(markdownDocs); err != nil {
 		log.Fatal(err)
 	}
 }

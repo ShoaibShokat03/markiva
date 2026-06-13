@@ -64,10 +64,10 @@ if not exist "ui\node_modules" (
   popd
 )
 
-echo Starting Markiva in development mode...
+echo Starting Markdown Docs in development mode...
 %WAILS_EXE% dev
 if errorlevel 1 (
-  echo Markiva failed to start.
+  echo Markdown Docs failed to start.
   pause
   exit /b 1
 )

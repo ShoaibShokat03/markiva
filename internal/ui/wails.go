@@ -10,13 +10,13 @@ import (
 
 func Run(a *app.App) error {
 	return wails.Run(&options.App{
-		Title:     "Markiva",
+		Title:     "Markdown Docs",
 		Width:     1180,
 		Height:    760,
 		MinWidth:  820,
 		MinHeight: 560,
 		SingleInstanceLock: &options.SingleInstanceLock{
-			UniqueId: "Markiva-Markdown-Editor-Viewer-9ad7f2b4",
+			UniqueId: "Markdown Docs-Markdown-Editor-Viewer-9ad7f2b4",
 			OnSecondInstanceLaunch: func(data options.SecondInstanceData) {
 				a.OpenFromArgs(data.Args)
 			},

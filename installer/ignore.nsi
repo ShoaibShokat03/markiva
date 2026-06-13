@@ -1,9 +1,9 @@
-!define APP_NAME "Markiva"
-!define APP_EXE "Markiva.exe"
+!define APP_NAME "Markdown Docs"
+!define APP_EXE "Markdown Docs.exe"
 !define APP_VERSION "1.0.0"
 
 Name "${APP_NAME}"
-OutFile "dist\Markiva-Setup.exe"
+OutFile "dist\Markdown-Docs-Setup.exe"
 InstallDir "$PROGRAMFILES64\${APP_NAME}"
 RequestExecutionLevel admin
 Icon "..\build\windows\icon.ico"
