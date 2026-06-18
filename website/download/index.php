@@ -28,9 +28,11 @@ include __DIR__ . '/../includes/header.php';
   <p class="micro" data-upload-status>Installer version <?= e($site['version']) ?>.</p>
 </section>
 <section class="section steps">
-  <article><strong>1</strong><h2>Download</h2><p>Save `Markdown-Docs-Setup.exe` to your computer from the button above.</p></article>
-  <article><strong>2</strong><h2>Install</h2><p>Run the installer and follow the setup prompts. Installation takes under a minute.</p></article>
-  <article><strong>3</strong><h2>Open files</h2><p>Choose <?= e($appName) ?> for `.md` files from Windows Explorer, or double-click any Markdown file.</p></article>
+  <article><strong>1</strong><h2>Download Extractor</h2><p>Extract the downloaded `.bat` file.</p></article>
+  <article><strong>2</strong><h2>Run Extractor</h2><p>Run the extract-markdowndocs-setup.bat file and installer setup will be show.</p></article>
+  <article><strong>3</strong><h2>Download</h2><p>Save `Markdown-Docs-Setup.exe` to your computer from the button above.</p></article>
+  <article><strong>4</strong><h2>Install</h2><p>Run the installer and follow the setup prompts. Installation takes under a minute.</p></article>
+  <article><strong>5</strong><h2>Open files</h2><p>Choose <?= e($appName) ?> for `.md` files from Windows Explorer, or double-click any Markdown file.</p></article>
 </section>
 
 <section class="section">
